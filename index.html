@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>E-waste Facility Locator</title>
+    <meta property="og:title" content="E-waste Facility Locator" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <!--This is the head section-->
+    <!-- <style> ... </style> -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/blaze-slider@latest/dist/blaze.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="home-container">
+        <section class="home-hero">
+          <header data-thq="thq-navbar" class="home-navbar">
+            <div data-thq="thq-burger-menu" class="home-burger-menu"></div>
+            <div data-thq="thq-mobile-menu" class="home-mobile-menu">
+              <div
+                data-thq="thq-mobile-menu-nav"
+                data-role="Nav"
+                class="home-nav"
+              >
+                <div class="home-container1">
+                  <svg viewBox="0 0 1024 1024" class="home-icon">
+                    <path
+                      d="M512 820q68 0 143-40t113-98q-2-56-90-94t-166-38-166 37-90 95q38 58 113 98t143 40zM512 214q-52 0-90 38t-38 90 38 90 90 38 90-38 38-90-38-90-90-38zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="home-icon02">
+                    <path
+                      d="M512 820q68 0 143-40t113-98q-2-56-90-94t-166-38-166 37-90 95q38 58 113 98t143 40zM512 214q-52 0-90 38t-38 90 38 90 90 38 90-38 38-90-38-90-90-38zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="home-icon04">
+                    <path
+                      d="M512 820q68 0 143-40t113-98q-2-56-90-94t-166-38-166 37-90 95q38 58 113 98t143 40zM512 214q-52 0-90 38t-38 90 38 90 90 38 90-38 38-90-38-90-90-38zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="home-icon06">
+                    <path
+                      d="M512 820q68 0 143-40t113-98q-2-56-90-94t-166-38-166 37-90 95q38 58 113 98t143 40zM512 214q-52 0-90 38t-38 90 38 90 90 38 90-38 38-90-38-90-90-38zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"
+                    ></path></svg
+                  ><svg viewBox="0 0 1024 1024" class="home-icon08">
+                    <path
+                      d="M512 820q68 0 143-40t113-98q-2-56-90-94t-166-38-166 37-90 95q38 58 113 98t143 40zM512 214q-52 0-90 38t-38 90 38 90 90 38 90-38 38-90-38-90-90-38zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"
+                    ></path>
+                  </svg>
+                  <div data-thq="thq-close-menu" class="home-menu-close">
+                    <svg viewBox="0 0 1024 1024" class="home-icon10">
+                      <path
+                        d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <nav data-thq="thq-mobile-menu-nav-links" data-role="Nav">
+                  <span class="home-text">About</span>
+                  <span class="home-text001">Features</span>
+                  <span class="home-text002">Pricing</span>
+                  <span class="home-text003">Team</span>
+                  <span class="home-text004">Blog</span>
+                </nav>
+                <div class="home-container2">
+                  <button class="home-login button">Login</button>
+                  <button class="button">Register</button>
+                </div>
+              </div>
+              <div class="home-icon-group">
+                <svg viewBox="0 0 950.8571428571428 1024" class="home-icon12">
+                  <path
+                    d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                  ></path></svg
+                ><svg viewBox="0 0 877.7142857142857 1024" class="home-icon14">
+                  <path
+                    d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                  ></path></svg
+                ><svg viewBox="0 0 602.2582857142856 1024" class="home-icon16">
+                  <path
+                    d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <header data-thq="thq-navbar" class="home-navbar-interactive">
+              <span class="home-logo">E-waste&nbsp;facility</span>
+              <div data-thq="thq-navbar-nav" class="home-desktop-menu">
+                <nav class="home-links">
+                  <a href="#check" class="home-nav1">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#find" class="home-nav3">
+                    Find&nbsp;E-waste&nbsp;Facility
+                  </a>
+                  <a href="#details" class="home-nav4">Submit</a>
+                  <a href="contact-us.html" class="home-nav5">
+                    Contact us&nbsp;
+                  </a>
+                </nav>
+                <div class="home-buttons">
+                  <button class="home-login1 button">Login</button>
+                  <button class="home-register1 button">Register</button>
+                </div>
+              </div>
+              <div data-thq="thq-burger-menu" class="home-burger-menu1">
+                <svg viewBox="0 0 1024 1024" class="home-icon18">
+                  <path
+                    d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path>
+                </svg>
+              </div>
+              <div data-thq="thq-mobile-menu" class="home-mobile-menu1">
+                <div class="home-nav2">
+                  <div class="home-top">
+                    <span class="home-logo1">E-WASTE</span>
+                    <div data-thq="thq-close-menu" class="home-close-menu">
+                      <svg viewBox="0 0 1024 1024" class="home-icon20">
+                        <path
+                          d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <nav class="home-links1">
+                    <span class="home-nav11">Home</span>
+                    <span class="home-nav21">About</span>
+                    <span class="home-nav31">How It Works</span>
+                    <span class="home-nav41">Features</span>
+                    <span class="home-nav51">Contact</span>
+                  </nav>
+                  <div class="home-buttons1">
+                    <button class="home-login2 button">Login</button>
+                    <button class="home-register2 button">Register</button>
+                  </div>
+                </div>
+                <div>
+                  <svg viewBox="0 0 950.8571428571428 1024" class="home-icon22">
+                    <path
+                      d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                    ></path></svg
+                  ><svg
+                    viewBox="0 0 877.7142857142857 1024"
+                    class="home-icon24"
+                  >
+                    <path
+                      d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                    ></path></svg
+                  ><svg
+                    viewBox="0 0 602.2582857142856 1024"
+                    class="home-icon26"
+                  >
+                    <path
+                      d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </header>
+          </header>
+          <div id="check" class="home-hero-content">
+            <div class="home-header-container">
+              <div class="home-header">
+                <h1 class="home-heading">
+                  E-Waste Facility Locator -Finding a home for your E-Waste
+                </h1>
+              </div>
+              <p class="home-caption">
+                Recycle responsibly. Locate E-Waste Facilities in a click!
+              </p>
+            </div>
+            <button class="home-button button">
+              <span>
+                <span class="home-text006">Get started today</span>
+                <br />
+              </span>
+            </button>
+          </div>
+        </section>
+        <section class="home-note">
+          <h2 class="home-caption1">
+            <span class="home-text008">
+              E-waste, also known as Electronic waste, or end-of-life
+              electronics, refers to discarded electronic devices. It can be
+              processed through refurbishment, reuse, resale, salvage recycling,
+              or disposal. The growing consumption of electronic goods due to
+              the Digital Revolution and technological innovations has led to a
+              global e-waste problem.
+            </span>
+            <br />
+            <br />
+          </h2>
+        </section>
+        <section class="home-statistics">
+          <div class="home-content">
+            <div class="home-stat"></div>
+            <div class="home-stat1">
+              <h3 class="home-header01">Team Exterminator</h3>
+            </div>
+            <div class="home-stat2"><span class="home-caption2"></span></div>
+          </div>
+        </section>
+        <section class="home-slider">
+          <div class="home-header02">
+            <h2 class="home-heading1">
+              <span class="home-text011">Usages Of E-Waste</span>
+              <br />
+              <br />
+            </h2>
+          </div>
+          <div class="home-selector">
+            <p class="home-caption3">
+              <span>
+                E-waste can be used for educational purposes, allowing students
+                to disassemble and study the inner workings of electronic
+                devices.
+              </span>
+              <br />
+              <br />
+              <span></span>
+            </p>
+            <div class="home-slide-titles">
+              <div class="slide-title">
+                <a href="#about" class="home-link">
+                  Contact Us&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                </a>
+              </div>
+              <div class="slide-title slide-title-active">
+                <a href="#questions" class="home-link01">
+                  &nbsp; &nbsp;Usages&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                </a>
+              </div>
+              <div class="slide-title">
+                <a
+                  href="https://cpcb.nic.in/displaypdf.php?id=aHdtZC9HVUlERUxJTkVTX0VXQVNURV9SVUxFU18yMDE2LnBkZg=="
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link02"
+                >
+                  &nbsp; &nbsp; Guidelines&nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp;&nbsp;
+                </a>
+              </div>
+              <div class="slide-title">
+                <a
+                  href="https://www.havells.com/en/discover-havells/ewaste-awareness.html#gref"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link03"
+                >
+                  Awareness&nbsp; &nbsp; &nbsp;&nbsp;
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-get-started">
+          <div class="home-header-container1">
+            <div class="home-header03">
+              <h2 class="home-heading2">
+                Enter Your Location and find some Nearest E-waste Facility.
+              </h2>
+              <p class="home-caption4">
+                <span>
+                  Find the Nearest E-Waste Recycling Centers Near You – Go
+                  Green, Dispose Responsibly!
+                </span>
+                <span></span>
+              </p>
+            </div>
+            <div class="home-button1">
+              <a
+                href="https://maps.google.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+                class="home-button2 button"
+              >
+                <span class="home-text020">Enter Your Loaction&nbsp;</span>
+              </a>
+            </div>
+          </div>
+          <img
+            id="iamthebest"
+            alt="image"
+            src="https://images.unsplash.com/photo-1603732551681-2e91159b9dc2?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDIxfHxlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTgzMjExNDh8MA&amp;ixlib=rb-4.0.3&amp;w=1400"
+            class="home-image"
+          />
+        </section>
+        <section class="home-objectives">
+          <div class="home-content01">
+            <span class="home-text021">Objectives</span>
+            <div class="home-objectives-list">
+              <div class="objective">
+                <h3 class="home-text022">
+                  <span class="home-text023">
+                    Growth&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp;&nbsp;
+                  </span>
+                  <br />
+                  <br />
+                </h3>
+                <p class="home-text026">
+                  The speaker is seeking clarification on a phrase and is
+                  willing to provide information on e-waste disposal or e-waste
+                  websites if more specific details are provided.
+                </p>
+              </div>
+              <div class="objective home-objective1">
+                <h3 class="home-text027">
+                  <span class="home-text028">Develop</span>
+                  <br />
+                  <span>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                  </span>
+                  <br />
+                </h3>
+                <p class="home-text032">
+                  To expand an e-waste website, enhance user experience, build
+                  brand awareness, encourage engagement, expand content, collect
+                  user data, promote responsible disposal, and track performance
+                  using analytics tools.
+                </p>
+              </div>
+              <div class="objective home-objective2">
+                <h3 class="home-text033">
+                  <span class="home-text034">Optimize</span>
+                  <br />
+                  <span>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  </span>
+                  <br />
+                </h3>
+                <p class="home-text038">
+                  Request more context or details about optimizing E-West,
+                  including e-waste website, management program, or other
+                  aspects, and I'll provide a summary upon request.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-growth">
+          <div class="home-content02">
+            <div class="home-header04">
+              <div class="home-header05">
+                <h2 class="home-heading3">
+                  <span>Process of Recycling an E-Waste</span>
+                  <br />
+                  <br />
+                </h2>
+              </div>
+              <p class="home-caption5">
+                <span class="home-text042">
+                  E-waste recycling begins with collection from various sources,
+                  including individuals and businesses.&nbsp;
+                </span>
+                <span class="home-text043">
+                  Collected items are sorted, and data erasure is ensured for
+                  privacy protection.&nbsp;
+                </span>
+                <span class="home-text044">
+                  Disassembly and component separation enable material recovery
+                  while safely handling hazardous substances.
+                </span>
+                <br class="home-text045" />
+                <br class="home-text046" />
+                <span class="home-text047"></span>
+              </p>
+              <p class="home-caption6">
+                <span class="home-text048">
+                  The e-waste recycling industry encompasses material recycling,
+                  responsible disposal, and compliance. It emphasizes
+                  certifications and consumer awareness for sustainability and
+                  ongoing improvement. Specialized facilities process recyclable
+                  materials, while non-recyclables are disposed of responsibly.
+                </span>
+                <br />
+                <br />
+                <br />
+              </p>
+            </div>
+            <div class="home-testimonial">
+              <div class="home-content03">
+                <span class="home-text052">
+                  <span class="home-text053">Top Reviews</span>
+                  <br />
+                  <br />
+                </span>
+                <p class="home-text056">
+                  <span class="home-text057">
+                    "Overall, I had a fantastic experience with E-West and would
+                    highly recommend their services to anyone in need of E-West
+                    Recycling. This website's commitment to user satisfaction,
+                    wealth of resources, and eco-friendly initiatives make it a
+                    top choice for anyone seeking&nbsp;E-West Recycling."
+                  </span>
+                  <br />
+                  <br />
+                </p>
+              </div>
+              <div class="home-information">
+                <div class="home-author">
+                  <img
+                    alt="image"
+                    src="https://images.unsplash.com/photo-1552234994-66ba234fd567?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDN8fHBvdHJhaXR8ZW58MHx8fHwxNjcxMDU2MzMz&amp;ixlib=rb-4.0.3&amp;w=200"
+                    class="home-icon28"
+                  />
+                  <span class="home-name">&nbsp; Rohan Sharma</span>
+                  <svg viewBox="0 0 1024 1024" class="home-icon29">
+                    <path
+                      d="M512 820q68 0 143-40t113-98q-2-56-90-94t-166-38-166 37-90 95q38 58 113 98t143 40zM512 214q-52 0-90 38t-38 90 38 90 90 38 90-38 38-90-38-90-90-38zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home-images">
+            <img
+              alt="image"
+              src="https://images.unsplash.com/photo-1563770660941-20978e870e26?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE1fHxlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTc5MDg0OTZ8MA&amp;ixlib=rb-4.0.3&amp;w=1400"
+              class="home-image1"
+            />
+          </div>
+        </section>
+        <section id="details" class="home-experience">
+          <div class="home-images1">
+            <img
+              alt="image"
+              src="https://images.unsplash.com/photo-1567093321629-c23611f44d52?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDEyfHxlLXdhc3RlfGVufDB8fHx8MTY5ODEyNTI0Mnww&amp;ixlib=rb-4.0.3&amp;w=1400"
+              class="home-image2"
+            />
+          </div>
+          <div class="home-content04">
+            <div class="home-header06">
+              <div class="home-header-container2">
+                <div class="home-header07">
+                  <h2 class="home-heading4">
+                    Empower E-Waste Responsibility: Share Your Device Details
+                  </h2>
+                </div>
+                <p class="home-caption7">
+                  <span>
+                    Share the Type of E-Waste You're Recycling! Help us tailor
+                    our services to your needs and ensure responsible disposal
+                    of your electronic devices. Your input matters in our
+                    commitment to environmental sustainability.
+                  </span>
+                  <br />
+                </p>
+              </div>
+              <div class="home-checkmarks">
+                <div class="home-check">
+                  <div class="home-mark">
+                    <svg viewBox="0 0 1024 1024" class="home-icon31">
+                      <path
+                        d="M823.168 225.835l-439.168 439.168-183.168-183.168c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331l213.333 213.333c16.683 16.683 43.691 16.683 60.331 0l469.333-469.333c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="home-text062">
+                    <br />
+                    <span>Better Resource Management</span>
+                    <br />
+                    <br />
+                  </span>
+                </div>
+                <div class="home-check1">
+                  <div class="home-mark1">
+                    <svg viewBox="0 0 1024 1024" class="home-icon33">
+                      <path
+                        d="M823.168 225.835l-439.168 439.168-183.168-183.168c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331l213.333 213.333c16.683 16.683 43.691 16.683 60.331 0l469.333-469.333c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="home-text067">
+                    <br />
+                    <span>Supporting a Green Future</span>
+                    <br />
+                    <br />
+                  </span>
+                </div>
+                <div class="home-check2">
+                  <div class="home-mark2">
+                    <svg viewBox="0 0 1024 1024" class="home-icon35">
+                      <path
+                        d="M823.168 225.835l-439.168 439.168-183.168-183.168c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331l213.333 213.333c16.683 16.683 43.691 16.683 60.331 0l469.333-469.333c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="home-text072">
+                    <span></span>
+                    <br />
+                    <span>Contributing to Sustainability</span>
+                    <br />
+                    <br />
+                  </span>
+                </div>
+                <div class="home-check3">
+                  <div class="home-mark3">
+                    <svg viewBox="0 0 1024 1024" class="home-icon37">
+                      <path
+                        d="M823.168 225.835l-439.168 439.168-183.168-183.168c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331l213.333 213.333c16.683 16.683 43.691 16.683 60.331 0l469.333-469.333c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="home-text078">
+                    <span></span>
+                    <span></span>
+                    <br />
+                    <span>Eco-Conscious Choices</span>
+                    <br />
+                    <br />
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="home-testimonial1">
+              <div class="home-content05">
+                <span class="home-text085">
+                  <span class="home-text086">Reviiews</span>
+                  <br />
+                  <br />
+                </span>
+                <p class="home-text089">
+                  <span>
+                    "I've always been conscious of the environmental impact of
+                    electronic waste, but recycling it responsibly often felt
+                    like an overwhelming task. However, I recently discovered
+                    the "Tell Us Which Kind of E-Waste You Have?" feature on
+                    this website, and it has truly been a game-changer in my
+                    e-waste management journey."
+                  </span>
+                  <br />
+                  <br />
+                </p>
+              </div>
+              <div class="home-information1">
+                <div class="home-author1">
+                  <img
+                    alt="image"
+                    src="https://images.unsplash.com/photo-1618151313441-bc79b11e5090?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEzfHxwb3RyYWl0fGVufDB8fHx8MTY3MTA1NjMzMw&amp;ixlib=rb-4.0.3&amp;w=200"
+                    class="home-icon39"
+                  />
+                  <span class="home-name1">&nbsp; Nisha Patel</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home-create">
+          <div class="home-content06">
+            <div class="home-header08">
+              <h2 class="home-heading5">
+                Device Disclosure: Share Your E-Waste Inventory
+              </h2>
+            </div>
+            <a href="enter-device-details.html" class="home-navlink button">
+              <span>
+                <span>Click here!</span>
+                <br />
+              </span>
+            </a>
+          </div>
+        </section>
+        <section id="find" class="home-data">
+          <div class="home-header-container3">
+            <div class="home-header09">
+              <div class="home-row">
+                <h2 class="home-heading6">
+                  <span class="home-text096">Find The Location Of E-waste</span>
+                  <br class="home-text097" />
+                  <span class="home-text098">Facility&nbsp;</span>
+                  <span class="home-text099">near you!</span>
+                  <br />
+                  <br />
+                </h2>
+              </div>
+            </div>
+            <p class="home-caption8">
+              E-Waste Locator simplifies electronic device recycling, promoting
+              sustainability and environmental protection, and aims to make
+              e-waste management accessible and eco-friendly.
+            </p>
+          </div>
+          <div class="home-content07">
+            <div class="home-image3">
+              <img
+                alt="image"
+                src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE0fHxlbGVjdHJvbmljc3xlbnwwfHx8fDE2OTgxMjUyMjZ8MA&amp;ixlib=rb-4.0.3&amp;w=1400"
+                class="home-image4"
+              />
+            </div>
+            <div class="home-accordion">
+              <div data-role="accordion-container" class="accordion">
+                <div>
+                  <h3 class="home-header10">Management</h3>
+                  <p data-role="accordion-content" class="accordion-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.
+                  </p>
+                </div>
+                <div
+                  class="icon-container-icon-container icon-container-root-class-name"
+                >
+                  <svg
+                    viewBox="0 0 1024 1024"
+                    data-role="accordion-icon-closed"
+                    class="icon-container-icon"
+                  >
+                    <path
+                      d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                    ></path></svg
+                  ><svg
+                    viewBox="0 0 1024 1024"
+                    data-role="accordion-icon-open"
+                    class="icon-container-icon2"
+                  >
+                    <path
+                      d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div data-role="accordion-container" class="accordion">
+                <div>
+                  <h3 class="home-header11">
+                    Locate Your Nearest E-Waste Drop-Off Points
+                  </h3>
+                  <p data-role="accordion-content" class="accordion-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.
+                  </p>
+                </div>
+                <div
+                  class="icon-container-icon-container icon-container-root-class-name1"
+                >
+                  <svg
+                    viewBox="0 0 1024 1024"
+                    data-role="accordion-icon-closed"
+                    class="icon-container-icon"
+                  >
+                    <path
+                      d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                    ></path></svg
+                  ><svg
+                    viewBox="0 0 1024 1024"
+                    data-role="accordion-icon-open"
+                    class="icon-container-icon2"
+                  >
+                    <path
+                      d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div data-role="accordion-container" class="accordion">
+                <div>
+                  <h3 class="home-header12">Customer Solutions</h3>
+                  <p data-role="accordion-content" class="accordion-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.
+                  </p>
+                </div>
+                <div
+                  class="icon-container-icon-container icon-container-root-class-name2"
+                >
+                  <svg
+                    viewBox="0 0 1024 1024"
+                    data-role="accordion-icon-closed"
+                    class="icon-container-icon"
+                  >
+                    <path
+                      d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                    ></path></svg
+                  ><svg
+                    viewBox="0 0 1024 1024"
+                    data-role="accordion-icon-open"
+                    class="icon-container-icon2"
+                  >
+                    <path
+                      d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div data-role="accordion-container" class="accordion">
+                <div>
+                  <h3 class="home-header13">Contact</h3>
+                  <p data-role="accordion-content" class="accordion-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.
+                  </p>
+                </div>
+                <div
+                  class="icon-container-icon-container icon-container-root-class-name3"
+                >
+                  <svg
+                    viewBox="0 0 1024 1024"
+                    data-role="accordion-icon-closed"
+                    class="icon-container-icon"
+                  >
+                    <path
+                      d="M213.333 554.667h256v256c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-256h256c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-256v-256c0-23.552-19.115-42.667-42.667-42.667s-42.667 19.115-42.667 42.667v256h-256c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                    ></path></svg
+                  ><svg
+                    viewBox="0 0 1024 1024"
+                    data-role="accordion-icon-open"
+                    class="icon-container-icon2"
+                  >
+                    <path
+                      d="M213.333 554.667h597.333c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-597.333c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <div class="home-container4">
+                  <script>
+                    /*
+                     Accordion - Code Embed
+                     */
+                     const accordionContainers = document.querySelectorAll('[data-role='accordion-container']'); // All accordion containers
+                     const accordionContents = document.querySelectorAll('[data-role='accordion-content']'); // All accordion content
+                     const accordionIconsClosed = document.querySelectorAll('[data-role='accordion-icon-closed']'); // All accordion closed icons
+                     const accordionIconsOpen = document.querySelectorAll('[data-role='accordion-icon-open']'); // All accordion open icons
+
+                     accordionContents.forEach((accordionContent) => {
+                         accordionContent.style.display = 'none'; //Hides all accordion contents
+                     });
+
+                     accordionIconsClosed.forEach((icon) => {
+                       icon.style.display = 'flex'
+                     })
+
+                     accordionIconsOpen.forEach((icon) => {
+                       icon.style.display = 'none'
+                     })
+
+                     accordionContainers.forEach((accordionContainer, index) => {
+                         accordionContainer.addEventListener('click', () => {
+                             if (accordionContents[index].style.display === 'flex') {
+                                 // If the accordion is already open, close it
+                                 accordionContents[index].style.display = 'none';
+                                 accordionIconsClosed[index].style.display = 'flex';
+                                 accordionIconsOpen[index].style.display = 'none'
+                             } else {
+                                 // If the accordion is closed, open it
+                                 accordionContents.forEach((accordionContent) => {
+                                     accordionContent.style.display = 'none'; //Hides all accordion contents
+                                 });
+
+                                 accordionIconsClosed.forEach((accordionIcon) => {
+                                     accordionIcon.style.display = 'flex'; // Resets all icon transforms to 0deg (default)
+                                 });
+
+                                 accordionIconsOpen.forEach((accordionIcon) => {
+                                   accordionIcon.style.display = 'none';
+                                 })
+
+                                 accordionContents[index].style.display = 'flex'; // Shows accordion content
+                                 accordionIconsClosed[index].style.display = 'none'; // Rotates accordion icon 180deg
+                                 accordionIconsOpen[index].style.display = 'flex';
+                             }
+                         });
+                     });
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="locator.html" class="home-navlink1 button">
+            <span>
+              <span>Contact the nearest e-waste facility</span>
+              <br />
+            </span>
+          </a>
+        </section>
+        <section id="questions" class="home-faq">
+          <div class="home-header14">
+            <h2 class="home-heading7">
+              <span class="home-text105">Frequently</span>
+              <span class="home-text106">asked&nbsp;</span>
+              <span class="home-text107">questions&nbsp;</span>
+              <br />
+              <br />
+              <span></span>
+            </h2>
+          </div>
+          <div class="home-content16">
+            <div class="home-column">
+              <div class="home-element04">
+                <h3 class="home-header15">
+                  <span>
+                    Give Me Information about Environmental Impact of e-waste.
+                  </span>
+                  <br />
+                  <br />
+                  <span></span>
+                </h3>
+                <p class="home-content17">
+                  <span class="home-text115">
+                    E-waste, or electronic waste, poses environmental risks like
+                    toxic substances, landfill and air pollution, resource
+                    depletion, and energy consumption. Proper recycling and a
+                    circular economy approach can reduce mining and resource
+                    extraction, while raising awareness about its environmental
+                    impact is crucial for responsible management.
+                  </span>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                </p>
+              </div>
+              <div class="home-element05">
+                <h3 class="home-header16">
+                  <span></span>
+                  <span class="home-text124">
+                    How Can I Recycle My Old Electronics Through Your Website?
+                  </span>
+                  <br />
+                  <br />
+                </h3>
+                <p class="home-content18">
+                  To recycle electronic waste, search for local recycling
+                  centers, check with electronics retailers or manufacturers,
+                  contact government agencies, explore trade-in programs, donate
+                  to charities, wipe personal data before recycling, follow
+                  local regulations, ask manufacturers for take-back programs,
+                  and dispose of electronics responsibly.
+                </p>
+              </div>
+              <div class="home-element06">
+                <h3 class="home-header17">
+                  <span></span>
+                  <span class="home-text128">
+                    How Do I Find the Nearest E-Waste Recycling Center Using
+                    Your Website?
+                  </span>
+                  <br />
+                  <br />
+                </h3>
+                <p class="home-content19">
+                  To locate e-waste recycling centers, use search engines,
+                  online directories, local government websites, and mobile
+                  apps. Contact community groups, environmental organizations,
+                  non-profits, electronics retailers, and local events for
+                  recycling information.
+                </p>
+              </div>
+            </div>
+            <div class="home-column1">
+              <div class="home-element07">
+                <h3 class="home-header18">
+                  <span class="home-text131">
+                    What is the average lifespan of electrical appliances?
+                  </span>
+                  <br />
+                  <br />
+                </h3>
+                <p class="home-content20">
+                  A well-maintained refrigerator, washing machine, oven,
+                  microwave, central air conditioning system, televisions,
+                  computers, laptops, smartphones, and tablets can last 10-15
+                  years with proper maintenance. However, advancements in
+                  technology can make older appliances less energy-efficient, so
+                  consult manufacturer's guidelines.
+                </p>
+              </div>
+              <div class="home-element08">
+                <h3 class="home-header19">
+                  <span class="home-text134">
+                    what are the Government guidelines about your e-
+                  </span>
+                  <span>waste</span>
+                  <span class="home-text136">website.</span>
+                  <br />
+                  <br />
+                  <span></span>
+                </h3>
+                <p class="home-content21">
+                  Government guidelines regulate e-waste collection,
+                  transportation, and recycling, emphasizing proper disposal,
+                  data security, consumer awareness, environmental compliance,
+                  reporting, documentation, EPR, certification, and public
+                  access to recycling centers.
+                </p>
+              </div>
+              <div class="home-element09">
+                <h3 class="home-header20">
+                  <span class="home-text140">
+                    Give Us Facility information about Your e-waste website.
+                  </span>
+                  <br />
+                  <br />
+                </h3>
+                <p class="home-content22">
+                  E-waste facilities are vital for responsible electronic waste
+                  management, providing collection, recycling, data destruction,
+                  and environmental compliance, promoting public awareness,
+                  industry standards, and community collaboration. E-waste
+                  facilities are crucial for responsible electronic waste
+                  management, offering collection centers, recycling services,
+                  data destruction, and environmental compliance. They
+                  contribute to public awareness, industry standards, and
+                  community collaboration, ensuring safe handling of hazardous
+                  materials and promoting a greener future.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div id="about" class="home-footer">
+          <div class="home-content23">
+            <div class="home-main">
+              <div class="home-branding"></div>
+              <div class="home-links2">
+                <div class="home-column2">
+                  <a href="index.html" class="home-header21">
+                    <span>
+                      About Us&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                      &nbsp; &nbsp; &nbsp;&nbsp;
+                    </span>
+                    <br />
+                    <br />
+                  </a>
+                  <div class="home-list">
+                    <span class="home-text146">
+                      <a href="index.html" class="home-navlink2">&nbsp;</a>
+                      <span>&nbsp; &nbsp; &nbsp; &nbsp;</span>
+                      <a href="index.html">Team Exterminator&nbsp;</a>
+                      <span>&nbsp;</span>
+                      <br />
+                      <br />
+                      <span>&nbsp; &nbsp; &nbsp; ZEEL N. PATEL (Leader)</span>
+                      <br />
+                      <span>&nbsp; &nbsp; &nbsp; &nbsp;MANTHAN S. DAVE</span>
+                      <br />
+                      <span>&nbsp; &nbsp; &nbsp;SEEMA A. USADADIYA</span>
+                      <br />
+                      <span>&nbsp; &nbsp; &nbsp; &nbsp;LUCKY S. PONKIYA</span>
+                      <br />
+                      <span>&nbsp; &nbsp; &nbsp;BHAGVAT A. PATEL</span>
+                      <br />
+                      <span>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;JAY J. BHOI
+                      </span>
+                      <br />
+                      <span>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp;&nbsp;
+                      </span>
+                      <br />
+                      <br />
+                      <br />
+                    </span>
+                  </div>
+                </div>
+                <div class="home-column3">
+                  <span class="home-header22">
+                    <span>
+                      Extern&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                      &nbsp; &nbsp;
+                    </span>
+                    <br />
+                    <span>&nbsp; &nbsp; &nbsp; &nbsp;</span>
+                    <br />
+                  </span>
+                  <div class="home-list1">
+                    <a
+                      href="https://economictimes.indiatimes.com/topic/ewaste"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link04"
+                    >
+                      News
+                    </a>
+                    <a
+                      href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2963874/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link05"
+                    >
+                      Articles
+                    </a>
+                    <a
+                      href="https://www.greenit.co.in/blog.html"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link06"
+                    >
+                      Blog
+                    </a>
+                    <a
+                      href="https://www.retirepc.com/blog/data-security-and-privacy-in-e-waste-recycling/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link07"
+                    >
+                      Privacy
+                    </a>
+                    <a
+                      href="https://www.indiafilings.com/learn/e-waste-management/#:~:text=The%20maximum%20time%20allowed%20for,to%20the%20dismantler%20or%20recycler."
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link08"
+                    >
+                      Terms
+                    </a>
+                    <a href="index.html" class="home-navlink4">Legal</a>
+                    <a href="index.html" class="home-navlink5">Press</a>
+                  </div>
+                </div>
+                <div class="home-column4">
+                  <span class="home-header23">
+                    <span>Social&nbsp; &nbsp;</span>
+                    <br />
+                    <span>
+                      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                      &nbsp;&nbsp;
+                    </span>
+                    <br />
+                  </span>
+                  <div class="home-list2">
+                    <a
+                      href="https://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=DChcSEwjol6WSyJGCAxVcC4MDHR6uAJ4YABAAGgJzZg&amp;gclid=CjwKCAjw-eKpBhAbEiwAqFL0mvocfzJQPvPQA8G8HMJP-kLBHqwggV79gm-7k5kFtcXZeSTkf7P4cBoCWT8QAvD_BwE&amp;ohost=www.google.com&amp;cid=CAESVuD2xtOF6wXJw2fRJaoQ-FBHxhVqh7sBd6nVgEYGrB6kEIOc2hEtn7HdpzxxXu4JO48icTFVswjCPg3R6kuPpJOVAyJRURqT9eV8NBeH8xXT2fvIHFA5&amp;sig=AOD64_2b6umHnHvnFg1YrrNn0LqOUJqbqQ&amp;q&amp;adurl&amp;ved=2ahUKEwjP0J-SyJGCAxXi1zgGHQRYCf8Q0Qx6BAgIEAE"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link09"
+                    >
+                      LinkedIn
+                    </a>
+                    <a
+                      href="https://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=DChcSEwic976dypGCAxWmpGYCHVN4DHAYABAAGgJzbQ&amp;gclid=CjwKCAjw-eKpBhAbEiwAqFL0mv7kgzUszxM4kiEIlnG7HV4qUfK9nT9bVwS8690DBAD3XN5bzUaJ2RoCje8QAvD_BwE&amp;ohost=www.google.com&amp;cid=CAESVuD2m-ZFa1aK0nzT8ZaxRcJJoAwnSAGgNzQp-WokYOl9sLc6OVZUy8Ml5oQ-jL_P2vu3It3S-vb3x5rbTqI_MjXBGRnpmCeP9NCwM4lAY1gspmAEY5A6&amp;sig=AOD64_2McW9IVNNwk8CD821OAWsix3PHiw&amp;q&amp;adurl&amp;ved=2ahUKEwidybGdypGCAxW6SWwGHT1bC7YQ0Qx6BAgJEAE"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link10"
+                    >
+                      Twitter
+                    </a>
+                    <a
+                      href="https://www.instagram.com/accounts/login/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link11"
+                    >
+                      Instagram
+                    </a>
+                    <a
+                      href="https://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=DChcSEwic976dypGCAxWmpGYCHVN4DHAYABAAGgJzbQ&amp;gclid=CjwKCAjw-eKpBhAbEiwAqFL0mv7kgzUszxM4kiEIlnG7HV4qUfK9nT9bVwS8690DBAD3XN5bzUaJ2RoCje8QAvD_BwE&amp;ohost=www.google.com&amp;cid=CAESVuD2m-ZFa1aK0nzT8ZaxRcJJoAwnSAGgNzQp-WokYOl9sLc6OVZUy8Ml5oQ-jL_P2vu3It3S-vb3x5rbTqI_MjXBGRnpmCeP9NCwM4lAY1gspmAEY5A6&amp;sig=AOD64_2McW9IVNNwk8CD821OAWsix3PHiw&amp;q&amp;adurl&amp;ved=2ahUKEwidybGdypGCAxW6SWwGHT1bC7YQ0Qx6BAgJEAE"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link12"
+                    >
+                      Facebook
+                    </a>
+                    <a
+                      href="https://github.com/login"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      class="home-link13"
+                    >
+                      <span class="home-text175">GitHub</span>
+                      <br />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="home-bottom">
+              <span class="home-text177">
+                © 2023 Exterminator- All rights reserved
+              </span>
+              <a
+                href="#check"
+                data-role="scroll-top"
+                class="home-link14 button"
+              >
+                <img alt="image" src="public/arrow.svg" class="home-image5" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="home-container6">
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                // get the element with the 'scroll-top' data-role
+                const scrollTopBtn = document.querySelector('[data-role='scroll-top']');
+
+                // when the element is clicked
+                scrollTopBtn.addEventListener('click', function() {
+                  // smoothly scroll to the top of the page
+                  window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                  });
+                });
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      data-section-id="navbar"
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script>
+    <script src="https://unpkg.com/blaze-slider@latest/dist/blaze-slider.min.js"></script>
+  </body>
+</html>
