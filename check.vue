@@ -1,4 +1,5 @@
 <template>
+  
   <div class="check-check">
     <svg viewBox="0 0 1024 1024" class="check-icon">
       <path
@@ -6,6 +7,7 @@
       ></path>
     </svg>
   </div>
+
 </template>
 
 <script>
