@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.not-found-container1{
+.not-found-container1{ 
   display: flex;               
   position: relative;                  
   align-items: center;               
