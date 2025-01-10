@@ -40,7 +40,7 @@ Label.defaultProps = {
 Label.propTypes = {
   text: PropTypes.string,
 }
-
+ 
 export default Label
 
 
