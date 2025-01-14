@@ -10,7 +10,7 @@ const Check = (props) => {
       </div>
       <style jsx>
         {`
-          .check-check {
+          .check-check { 
             width: 32px;
             height: 32px;
             display: flex;
@@ -25,6 +25,11 @@ const Check = (props) => {
           }
           .check-icon {
             fill: #ffffff;
+            width: 12px;
+            height: 12px;
+          }
+          .check-icon {
+            fill: white;
             width: 12px;
             height: 12px;
           }
