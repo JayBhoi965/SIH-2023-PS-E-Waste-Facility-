@@ -18,4 +18,4 @@ export default {
   align-items: flex-start;
   flex-direction: column;
 }
-</style>
+</style>  
